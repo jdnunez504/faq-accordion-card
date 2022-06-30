@@ -1,0 +1,105 @@
+@import '_reset';
+@import '_variables';
+
+body {
+    background-image: $clr-bg-grd;
+    font-family: 'Kumbh Sans', Arial, sans-serif;
+    h1 {
+        font-size: $fs-h1;
+    }
+    
+    h3 {
+        font-size: $fs-h3;
+        font-weight: $fw-reg;
+    }
+    
+    p {
+        font-size: $fs-copy;
+    }
+}
+
+.main {
+    display: flex;
+    flex: column;
+    justify-content: center;
+    padding: 1.5rem;
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $clr-neut-1;
+        padding: 1.5rem;
+        border-radius: 20px;
+        position: relative;
+        .image-comp {
+            position: relative;
+            top: -40px;
+            .woman-online > img {
+                position: relative;
+                top: -40px;
+            }
+            .pattern > img {
+                position: relative;
+                top: -50px;
+            }
+        }
+        
+        .title {
+            line-height: 1;
+            margin-bottom: 2rem;
+            color: $clr-pri-1;
+        }
+        .questions {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            .question {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+                cursor: pointer;
+                &-title {
+                    color: $clr-neut-2;
+                }
+                &.reveal > .question-title {
+                    font-weight: $fw-bold;
+                    color: $clr-pri-1;
+                }
+                .arrow {
+                    height: 8px;
+                    width: 10px;
+                    transition: all 0.5s;
+                }
+                &.reveal > .arrow {
+                    transform: rotate(180deg);
+                }
+            }
+            .answer {
+                display: inline-block;
+                max-height: 0px;
+                overflow: hidden;
+                transition: all 0.5s;
+                p {
+                    margin-bottom: 1rem;
+                    color: $clr-neut-3;
+                }
+            }
+            .divider {
+                display: inline-block;
+                height: 1px;
+                width: 100%;
+                background-color: $clr-neut-4;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
