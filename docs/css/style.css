@@ -106,7 +106,7 @@ h3 {
   font-weight: 400;
   line-height: 16px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 994px) {
   h3 {
     font-size: 14px;
     font-weight: 400;
@@ -125,7 +125,7 @@ main {
   height: 100vh;
   padding: 150px 24px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 994px) {
   main {
     padding: 0px 75px;
     padding-top: 128px;
@@ -142,7 +142,7 @@ main {
   border-radius: 23px;
   box-shadow: 3px 30px 50px rgba(29, 30, 53, 0.4);
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 994px) {
   .card {
     display: block;
     grid-template-columns: 1fr 1fr;
@@ -150,7 +150,7 @@ main {
     padding-left: 0;
     padding-right: 0;
     max-height: 509px;
-    max-width: 1210px;
+    max-width: 920px;
   }
 }
 .card-image {
@@ -162,7 +162,7 @@ main {
   background-position: top center, bottom center;
   margin-top: -128px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 994px) {
   .card-image {
     height: 509px;
     width: 472px;
@@ -182,7 +182,7 @@ main {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 994px) {
   .card-content {
     align-items: flex-start;
     padding-top: 65px;
@@ -191,7 +191,7 @@ main {
 .card-content .title {
   margin-bottom: 40px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 994px) {
   .card-content .title {
     margin-bottom: 45px;
   }
@@ -199,7 +199,7 @@ main {
 .card-content .faq {
   margin-bottom: 48px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 994px) {
   .card-content .faq {
     padding-right: 95px;
   }
@@ -207,7 +207,7 @@ main {
 .card-content .faq .faq-item {
   margin-bottom: 19px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 994px) {
   .card-content .faq .faq-item {
     margin-bottom: 18px;
   }
@@ -223,7 +223,7 @@ main {
 .card-content .faq .faq-item .faq-title:hover {
   color: hsl(14deg, 88%, 65%);
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 994px) {
   .card-content .faq .faq-item .faq-title {
     margin-bottom: 18px;
   }
@@ -246,7 +246,7 @@ main {
   background-color: hsl(240deg, 5%, 91%);
   margin-top: 2px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 994px) {
   .card-content .faq .faq-item .break-line {
     margin-top: -3px;
   }

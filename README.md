@@ -26,7 +26,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Source](https://github.com/jdnunez504/faq-accordion-card)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://jdnunez504.github.io/faq-accordion-card/)
 
 ## My process
 
