@@ -27,6 +27,10 @@ p {
 main {
     height: 100vh;
     padding: px(150, 24);
+    @include min-width($dw-desktop) {
+        padding: px(0, 75);
+        padding-top: px(128);
+    }
 }
 
 .card {
@@ -38,31 +42,75 @@ main {
     align-items: center;
     border-radius: px(23);
     box-shadow: px(3, 30) 50px  rgba(29, 30, 53, 0.4);
-    .card-image {
+    @include min-width($dw-desktop) {
+        display: block;
+        grid-template-columns: 1fr 1fr;
+        height: px(509);
+        padding-left: 0;
+        padding-right: 0;
+        max-height: px(509);
+        max-width: px(1210);
+    }
+    &-image {
         @include hw(212, 238); 
         background-image: url(../images/illustration-woman-online-mobile.svg), url(../images/bg-pattern-mobile.svg);
         background-repeat: no-repeat, no-repeat;
         background-size: px(237, 180), px(240, 104);
         background-position: top center, bottom center;
-        margin-top: px(-110);
-        margin-bottom: px(28);
+        margin-top: px(-128);
+        @include min-width($dw-desktop) {
+            @include hw(509, 472); //hw(944, 964)
+            float: left;
+            background-image: 
+                url(../images/illustration-box-desktop.svg),
+                url(../images/illustration-woman-online-desktop.svg),
+                url(../images/bg-pattern-desktop.svg);
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-size: px(184, 191), px(472, 359), px(964, 964);
+            background-position: px(-10, 208), px(0, 75), px(-491, -285);
+            margin-top: px(-0);
+            margin-bottom: px(0);
+            margin-left: px(-75);
+            margin-right: px(87);
+        }
     }
-    .title {
-        margin-bottom: px(40);
-    }
-    .wrapper--list {
+    
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include min-width($dw-desktop) {
+            align-items: flex-start;
+            padding-top: px(65);
+        }
+        .title {
+            margin-bottom: px(40);
+            @include min-width($dw-desktop) {
+                margin-bottom: px(45);
+            }
+        }
         .faq {
             margin-bottom: px(48);
+            @include min-width($dw-desktop) {
+                padding-right: px(95);
+            }
             .faq-item {
+                margin-bottom: px(19);
+                @include min-width($dw-desktop) {
+                    margin-bottom: px(18);
+                }
                 .faq-title {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    margin-bottom: px(14);
+                    margin-bottom: px(13);
                     cursor: pointer;
                     transition: all 0.5s;
                     &:hover {
                         color: $clr-sec-2;
+                    }
+                    @include min-width($dw-desktop) {
+                        margin-bottom: px(18);
                     }
                     .icon-arrow {
                         display: inline-block;
@@ -80,7 +128,10 @@ main {
                     height: 1px;
                     width: 100%;
                     background-color: $clr-neu-2;
-                    margin-bottom: px(19);
+                    margin-top: px(2);
+                    @include min-width($dw-desktop) {
+                        margin-top: px(-3);
+                    }
                 }
             }
         }

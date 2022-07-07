@@ -1,5 +1,9 @@
 let questions = document.querySelectorAll('.faq-title');
-const marginBtm = 19;
+let marginBtm = 19;
+if (document.documentElement.clientWidth <= 900) {
+    marginBtm = 14;
+} 
+
 
 for(let i = 0; i < questions.length; i++) {
     questions[i].addEventListener('click', revealAnswer);

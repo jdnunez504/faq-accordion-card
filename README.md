@@ -37,6 +37,9 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+### Continued Development
+
+- Tracking live viewport size changes in javascript
 
 ### Useful resources
 
