@@ -2,104 +2,89 @@
 @import '_variables';
 
 body {
-    background-image: $clr-bg-grd;
-    font-family: 'Kumbh Sans', Arial, sans-serif;
-    h1 {
-        font-size: $fs-h1;
-    }
-    
-    h3 {
-        font-size: $fs-h3;
-        font-weight: $fw-reg;
-    }
-    
-    p {
-        font-size: $fs-copy;
+    font-family: $ff;
+    background-image: $clr-pri-grd;
+}
+
+h1 {
+    color: $clr-pri-1;
+    @include heading-lg;
+}
+
+h3 {
+    color: $clr-neu-4;
+    @include heading-xs;
+    @include min-width($dw-desktop) {
+        @include heading-sm;
     }
 }
 
-.main {
+p {
+    color: $clr-neu-3;
+    @include body-s;
+}
+
+main {
+    height: 100vh;
+    padding: px(150, 24);
+}
+
+.card {
+    margin: auto;
+    background-color: $clr-neu-1;
+    padding: px(0, 25);
     display: flex;
-    flex: column;
-    justify-content: center;
-    padding: 1.5rem;
-    .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: $clr-neut-1;
-        padding: 1.5rem;
-        border-radius: 20px;
-        position: relative;
-        .image-comp {
-            position: relative;
-            top: -40px;
-            .woman-online > img {
-                position: relative;
-                top: -40px;
-            }
-            .pattern > img {
-                position: relative;
-                top: -50px;
-            }
-        }
-        
-        .title {
-            line-height: 1;
-            margin-bottom: 2rem;
-            color: $clr-pri-1;
-        }
-        .questions {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            margin: 0;
-            .question {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 1rem;
-                cursor: pointer;
-                &-title {
-                    color: $clr-neut-2;
+    flex-direction: column;
+    align-items: center;
+    border-radius: px(23);
+    box-shadow: px(3, 30) 50px  rgba(29, 30, 53, 0.4);
+    .card-image {
+        @include hw(212, 238); 
+        background-image: url(../images/illustration-woman-online-mobile.svg), url(../images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-size: px(237, 180), px(240, 104);
+        background-position: top center, bottom center;
+        margin-top: px(-110);
+        margin-bottom: px(28);
+    }
+    .title {
+        margin-bottom: px(40);
+    }
+    .wrapper--list {
+        .faq {
+            margin-bottom: px(48);
+            .faq-item {
+                .faq-title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: px(14);
+                    cursor: pointer;
+                    transition: all 0.5s;
+                    &:hover {
+                        color: $clr-sec-2;
+                    }
+                    .icon-arrow {
+                        display: inline-block;
+                        @include hw(6, 9);
+                        background-image: url(../images/icon-arrow-down.svg);
+                        transition: all 0.5s;
+                    }
                 }
-                &.reveal > .question-title {
-                    font-weight: $fw-bold;
-                    color: $clr-pri-1;
-                }
-                .arrow {
-                    height: 8px;
-                    width: 10px;
+                .faq-answer {
+                    overflow: hidden;
+                    max-height: 0;
                     transition: all 0.5s;
                 }
-                &.reveal > .arrow {
-                    transform: rotate(180deg);
+                .break-line {
+                    height: 1px;
+                    width: 100%;
+                    background-color: $clr-neu-2;
+                    margin-bottom: px(19);
                 }
-            }
-            .answer {
-                display: inline-block;
-                max-height: 0px;
-                overflow: hidden;
-                transition: all 0.5s;
-                p {
-                    margin-bottom: 1rem;
-                    color: $clr-neut-3;
-                }
-            }
-            .divider {
-                display: inline-block;
-                height: 1px;
-                width: 100%;
-                background-color: $clr-neut-4;
-                margin-bottom: 1rem;
             }
         }
     }
 }
-
-
-
-
 
 

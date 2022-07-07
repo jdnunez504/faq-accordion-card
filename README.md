@@ -41,6 +41,7 @@ Users should be able to:
 ### Useful resources
 
 - [Accordion Dropdown Menus - Vanilla CSS/Vanilla JS](https://codepen.io/phileflanagan/pen/mwpQpY)
+- [Vanilla JS Accordion](https://www.w3schools.com/howto/howto_js_accordion.asp)
 
 ## Author
 

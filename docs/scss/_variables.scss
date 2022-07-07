@@ -1,16 +1,74 @@
-$clr-pri-1: hsl(238, 29%, 16%);
-$clr-pri-2: hsl(14, 88%, 65%);
+// MIXINS, FUNCTIONS, AND OTHER
+@function px($pixels1, $pixels2: null) {
+    @if ($pixels2 == null) {@return $pixels1 * 1px;}
+    @else {@return $pixels1 * 1px $pixels2 * 1px;}
+}
 
-$clr-neut-1: hsl(0, 0%, 100%);
-$clr-neut-2: hsl(237, 12%, 33%);
-$clr-neut-3: hsl(240, 6%, 50%);
-$clr-neut-4: hsl(240, 5%, 91%);
+@mixin hw($height, $width) {
+    height: $height * 1px;
+    width: $width * 1px;
+}
 
-$clr-bg-grd: linear-gradient(to bottom, #af67e9, #9f67e9, #8d66e9, #7a66e8, #6565e7); 
+@mixin heading-lg {
+    font-size: $fs-hd-lg;
+    font-weight: $fw-hd-lg;
+    line-height: $lh-hd-lg;
+}
 
-$fs-h1: 2rem;
-$fs-h3: 0.83rem;
-$fs-copy: 0.75rem;
+@mixin heading-sm {
+    font-size: $fs-hd-sm;
+    font-weight: $fw-hd-sm;
+    line-height: $lh-hd-sm;
+}
+@mixin heading-xs {
+    font-size: $fs-hd-xs;
+    font-weight: $fw-hd-xs;
+    line-height: $lh-hd-xs;
+}
+@mixin body-s {
+    font-size: $fs-body-s;
+    font-weight: $fw-body-s;
+    line-height: $lh-body-s;
+}
 
-$fw-reg: 400;
-$fw-bold: 700;
+@mixin min-width($threshold) {
+    @media screen and (min-width: $threshold) {
+        @content;
+    }
+}
+
+// COLOR
+$clr-pri-1: rgb(29, 30, 53);
+$clr-sec-2: hsl(14, 88%, 65%);
+
+$clr-neu-1: hsl(0, 0%, 100%);
+$clr-neu-2: hsl(240, 5%, 91%);
+$clr-neu-3: hsl(240, 6%, 50%);
+$clr-neu-4: hsl(237, 12%, 33%);
+
+$clr-pri-grd: linear-gradient(to bottom, #af67e9, #9f67e9, #8d66e9, #7a66e8, #6565e7); 
+
+// TYPOGRAPHY
+$ff: 'Kumbh Sans', sans-serif;
+
+$bold: 700;
+$reg: 400;
+
+$fs-hd-lg: px(32);
+$fw-hd-lg: $bold;
+$lh-hd-lg: px(40);
+
+$fs-hd-sm: px(14);
+$fw-hd-sm: $reg;
+$lh-hd-sm: px(17);
+
+$fs-hd-xs: px(13);
+$fw-hd-xs: $reg;
+$lh-hd-xs: px(16);
+
+$fs-body-s: px(12);
+$fw-body-s: $reg;
+$lh-body-s: px(18);
+
+// MEDIA QUERY
+$dw-desktop: 900px;
